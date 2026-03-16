@@ -2,31 +2,114 @@
 <html>
 <head>
   <title><%=title%></title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+  <style>body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b2c5c;
+            color: white;
+        }
+
+        header {
+            background: black;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #3fb4ff;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #3fb4ff;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3fb4ff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .card {
+            background: #111;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #3fb4ff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3fb4ff;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: black;
+            margin-top: 40px;
+            font-size: 14px;
+        }</style>
 </head>
 <body>
 
-  <h1>Bem vindo a página do <%= title %></title></h1>
+  <header>
+    <h1>Grêmio Foot-Ball Porto Alegrense</h1>
 
-  <h2>História do <%= title %></h2>
+    <nav>
+        <a href="#">História</a>
+        <a href="#">Títulos</a>
+        <a href="#">Torcida</a>
+    </nav>
+</header>
 
-  <p>
-    O Grêmio Foot-Ball Porto Alegrense foi fundado em 15 de setembro de 1903,
-    na cidade de Porto Alegre, no Rio Grande do Sul. O clube foi criado por um
-    grupo de amigos liderado por Cândido Dias da Silva.
-  </p>
+<div class="container">
 
-  <p>
-    Ao longo de sua história, o Grêmio se tornou um dos clubes mais tradicionais
-    do futebol brasileiro. O time conquistou diversos títulos importantes,
-    incluindo a Copa do Brasil, o Campeonato Brasileiro e a Copa Libertadores
-    da América.
-  </p>
+    <div class="card">
+        <h2>História</h2>
+        <p>
+            Fundado em 15 de setembro de 1903, em Porto Alegre, o Grêmio é um dos clubes
+            mais tradicionais do futebol brasileiro. Conhecido como Imortal Tricolor,
+            o clube construiu sua história com raça, competitividade e uma torcida apaixonada.
+        </p>
 
-  <p>
-    O clube manda seus jogos na Arena do Grêmio e é conhecido como "Imortal
-    Tricolor", devido à sua tradição e à força de sua torcida.
-  </p>
+        <p>
+            Ao longo de sua trajetória, o Grêmio conquistou títulos nacionais e
+            internacionais, consolidando-se como uma potência do futebol sul-americano.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Principais Títulos</h2>
+        <ul>
+            <li>3x Copa Libertadores</li>
+            <li>2x Campeonato Brasileiro</li>
+            <li>5x Copa do Brasil</li>
+            <li>1x Mundial Interclubes</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>Imortal Tricolor • Porto Alegre - RS</p>
+</footer>
 
 </body>
 </html>
