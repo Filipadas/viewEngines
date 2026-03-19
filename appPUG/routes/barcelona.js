@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.render('barcelona');
+  res.render('barcelona', { title: 'Barcelona' });
 });
 
 router.get('/jogadores', function(req, res) {
@@ -10,7 +10,7 @@ router.get('/jogadores', function(req, res) {
 });
 
 router.get('/titulos', function(req, res) {
-  res.render('titulos');
+  res.render('titulos', { title: 'Títulos do Barcelona' });
 });
 
 

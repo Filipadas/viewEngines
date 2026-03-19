@@ -1,45 +1,66 @@
-doctype html
-html
-  head
-    title FC Barcelona
-    style.
-      body{
-        font-family: Arial;
-        background:#a50044;
-        color:white;
-        text-align:center;
-        margin:0;
-      }
-      header{
-        background:#004d98;
-        padding:20px;
-      }
-      .container{
-        max-width:800px;
-        margin:auto;
-        padding:30px;
-      }
-      a{
-        color:yellow;
-        margin:10px;
-        display:inline-block;
-        font-weight:bold;
-      }
-  body
-    header
+extends layout
+
+block content
+  style.
+    body {
+      font-family: 'Segoe UI', Arial;
+      background: #111827;
+      color: white;
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #000;
+      padding: 15px;
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      color: white;
+      background: #a50044;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #004d98;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #a50044, #004d98);
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      background: #1f2937;
+      padding: 25px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+  .navbar
+    a.nav-btn(href="/barcelona") História
+    a.nav-btn(href="/barcelona/jogadores") Jogadores
+    a.nav-btn(href="/barcelona/titulos") Títulos
+
+  .container
+    .hero
       h1 FC Barcelona
-      p Més que un club
+      p História de um gigante europeu
 
-    .container
-      h2 História
-      p
-        | Fundado em 1899 na cidade de Barcelona, o FC Barcelona é um dos
-        | clubes mais tradicionais do futebol mundial. O time construiu
-        | uma identidade baseada em futebol ofensivo, formação de jovens
-        | talentos e forte ligação com a cultura catalã.
-      p
-        | Ao longo de sua história, o clube revelou grandes jogadores e
-        | conquistou títulos importantes na Espanha e na Europa.
-
-      a(href="/barcelona/jogadores") Jogadores
-      a(href="/barcelona/titulos") Títulos
+    .content
+      p Fundado em 1899, o FC Barcelona é um dos clubes mais importantes do mundo.
+      p Conhecido pelo estilo "tiki-taka" e pela sua filosofia única.

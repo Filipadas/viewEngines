@@ -1,22 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Jogadores do Barcelona</title>
-</head>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial;
+    background: #111827;
+    color: white;
+    margin: 0;
+  }
 
-<body>
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #000;
+    padding: 15px;
+  }
 
-<h1>Jogadores do Barcelona</h1>
+  .nav-btn {
+    text-decoration: none;
+    color: white;
+    background: #a50044;
+    padding: 8px 15px;
+    border-radius: 8px;
+  }
 
-<ul>
-    <li>Robert Lewandowski</li>
-    <li>Pedri</li>
-    <li>Gavi</li>
-    <li>Frenkie de Jong</li>
-    <li>Ronald Araújo</li>
-</ul>
+  .nav-btn:hover {
+    background: #004d98;
+  }
 
-<a href="/barcelona">Voltar</a>
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+  }
 
-</body>
-</html>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    background: #374151;
+  }
+</style>
+
+<div class="navbar">
+  <a class="nav-btn" href="/barcelona">História</a>
+  <a class="nav-btn" href="/barcelona/jogadores">Jogadores</a>
+  <a class="nav-btn" href="/barcelona/titulos">Títulos</a>
+</div>
+
+<div class="container">
+  <h1>Ídolos do Barcelona</h1>
+
+  <div class="cards">
+    <div class="card"><h2>Lionel Messi</h2></div>
+    <div class="card"><h2>Xavi Hernández</h2></div>
+    <div class="card"><h2>Andrés Iniesta</h2></div>
+    <div class="card"><h2>Ronaldinho Gaúcho</h2></div>
+    <div class="card"><h2>Carles Puyol</h2></div>
+  </div>
+</div>

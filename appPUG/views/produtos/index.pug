@@ -1,0 +1,124 @@
+extends layout
+
+block content
+  style.
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    .produtos-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .produtos-table thead {
+      background: #4f46e5;
+      color: white;
+    }
+
+    .produtos-table th,
+    .produtos-table td {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    .produtos-table tbody tr {
+      border-bottom: 1px solid #ddd;
+      transition: 0.2s;
+    }
+
+    .produtos-table tbody tr:hover {
+      background: #f1f5ff;
+    }
+
+    .preco {
+      font-weight: bold;
+      color: #16a34a;
+    }
+
+    .acoes {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: 0.2s;
+    }
+
+    .btn-view {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .btn-edit {
+      background: #f59e0b;
+      color: white;
+    }
+
+    .btn-delete {
+      background: #ef4444;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .empty {
+      text-align: center;
+      color: #888;
+      margin-top: 20px;
+    }
+
+  .container
+    h1.title Lista de Produtos
+
+    if produtos.length > 0
+      .table-wrapper
+        table.produtos-table
+          thead
+            tr
+              th ID
+              th Nome
+              th Preço
+              th Ações
+          tbody
+            each produto in produtos
+              tr
+                td= produto.id
+                td= produto.nome
+                td.preco R$ #{produto.preco.toFixed(2)}
+                td
+                  .acoes
+                    button.btn.btn-view Visualizar
+                    button.btn.btn-edit Editar
+                    button.btn.btn-delete Excluir
+    else
+      p.empty Nenhum produto encontrado.

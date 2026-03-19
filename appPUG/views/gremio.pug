@@ -1,98 +1,118 @@
-doctype html
-html
-  head 
-    title Gremio
+extends layout
 
-    style.
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0b2c5c;
-        color: white;
-      }
+block content
+  style.
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0f172a;
+      margin: 0;
+      color: #fff;
+    }
 
-      header {
-        background: black;
-        padding: 20px;
-        text-align: center;
-        border-bottom: 3px solid #3fb4ff;
-      }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
 
-      header h1 {
-        margin: 0;
-        color: #3fb4ff;
-      }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #00a3e0, #000);
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
 
-      nav {
-        margin-top: 10px;
-      }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-      nav a:hover {
-        color: #3fb4ff;
-      }
+    .section {
+      margin-bottom: 30px;
+    }
 
-      .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 30px;
-      }
+    .section h2 {
+      border-left: 5px solid #00a3e0;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
 
-      .card {
-        background: #111;
-        padding: 25px;
-        border-radius: 10px;
-        border-left: 5px solid #3fb4ff;
-        margin-bottom: 20px;
-      }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
 
-      h2 {
-        color: #3fb4ff;
-      }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
 
-      ul {
-        padding-left: 20px;
-      }
+    .card:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
 
-      footer {
-        text-align: center;
-        padding: 15px;
-        background: black;
-        margin-top: 40px;
-        font-size: 14px;
-      }
-  body
-    header
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .titulos-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .titulos-list li {
+      background: #1e293b;
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+  .container
+
+    // HERO
+    .hero
       h1 Grêmio Foot-Ball Porto Alegrense
-      nav
-        a(href="#") História
-        a(href="#") Títulos
-        a(href="#") Torcida
+      p Um dos maiores clubes do Brasil 🇧🇷
 
-    .container
-      .card
-        h2 História
-        p
-          | Fundado em 15 de setembro de 1903, em Porto Alegre, o Grêmio é um dos clubes
-          | mais tradicionais do futebol brasileiro. Conhecido como Imortal Tricolor,
-          | o clube construiu sua história com raça, competitividade e uma torcida apaixonada.
-        p
-          | Ao longo de sua trajetória, o Grêmio conquistou títulos nacionais e
-          | internacionais, consolidando-se como uma potência do futebol sul-americano.
+    // HISTÓRIA
+    .section
+      h2 História
+      p
+        | Fundado em 1903, o Grêmio é um dos clubes mais tradicionais do futebol brasileiro.
+        | Conhecido por sua garra e imortalidade, o clube conquistou títulos importantes
+        | nacionais e internacionais ao longo de sua história.
 
-      .card
-        h2 Principais Títulos
-        ul
-          li 3x Copa Libertadores
-          li 2x Campeonato Brasileiro
-          li 5x Copa do Brasil
-          li 1x Mundial Interclubes
+    // JOGADORES
+    .section
+      h2 Ídolos do Clube
+      .cards
+        .card
+          h3 Renato Gaúcho
+        .card
+          h3 Ronaldinho Gaúcho
+        .card
+          h3 Danrlei
+        .card
+          h3 Geromel
+        .card
+          h3 Luan
 
-    footer
-      p Imortal Tricolor • Porto Alegre - RS
+    // TÍTULOS
+    .section
+      h2 Principais Títulos
+      ul.titulos-list
+        li Libertadores da América (3x)
+        li Campeonato Brasileiro (2x)
+        li Copa do Brasil (5x)
+        li Recopa Sul-Americana (2x)

@@ -1,0 +1,108 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+
+  .produtos-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .produtos-table thead {
+    background: #4f46e5;
+    color: white;
+  }
+
+  .produtos-table th,
+  .produtos-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  .produtos-table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .produtos-table tbody tr:hover {
+    background: #f1f5ff;
+  }
+
+  .preco {
+    font-weight: bold;
+    color: #16a34a;
+  }
+
+  .acoes {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .btn-view { background: #3b82f6; color: white; }
+  .btn-edit { background: #f59e0b; color: white; }
+  .btn-delete { background: #ef4444; color: white; }
+
+  .empty {
+    text-align: center;
+    color: #888;
+  }
+</style>
+
+<div class="container">
+  <h1 class="title">Lista de Produtos</h1>
+
+  {{#if produtos.length}}
+    <table class="produtos-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each produtos}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{nome}}</td>
+          <td class="preco">R$ {{preco}}</td>
+          <td>
+            <div class="acoes">
+              <button class="btn btn-view">Visualizar</button>
+              <button class="btn btn-edit">Editar</button>
+              <button class="btn btn-delete">Excluir</button>
+            </div>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="empty">Nenhum produto encontrado.</p>
+  {{/if}}
+</div>

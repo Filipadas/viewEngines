@@ -1,15 +1,75 @@
-doctype html
-html
-  head
-    title Jogadores - Barcelona
-  body
-    h1 Jogadores do Barcelona
+extends layout
 
-    ul
-      li Robert Lewandowski
-      li Pedri
-      li Gavi
-      li Frenkie de Jong
-      li Ronald Araújo
+block content
+  style.
+    body {
+      font-family: 'Segoe UI', Arial;
+      background: #111827;
+      color: white;
+      margin: 0;
+    }
 
-    a(href="/barcelona") Voltar
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #000;
+      padding: 15px;
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      color: white;
+      background: #a50044;
+      padding: 8px 15px;
+      border-radius: 8px;
+    }
+
+    .nav-btn:hover {
+      background: #004d98;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: #374151;
+    }
+
+  .navbar
+    a.nav-btn(href="/barcelona") História
+    a.nav-btn(href="/barcelona/jogadores") Jogadores
+    a.nav-btn(href="/barcelona/titulos") Títulos
+
+  .container
+    h1 Ídolos do Barcelona
+
+    .cards
+      .card
+        h2 Lionel Messi
+      .card
+        h2 Xavi Hernández
+      .card
+        h2 Andrés Iniesta
+      .card
+        h2 Ronaldinho Gaúcho
+      .card
+        h2 Carles Puyol

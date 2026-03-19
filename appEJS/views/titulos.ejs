@@ -1,22 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Títulos do Barcelona</title>
-</head>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial;
+    background: #111827;
+    color: white;
+    margin: 0;
+  }
 
-<body>
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #000;
+    padding: 15px;
+  }
 
-<h1>Principais Títulos</h1>
+  .nav-btn {
+    text-decoration: none;
+    color: white;
+    background: #a50044;
+    padding: 8px 15px;
+    border-radius: 8px;
+  }
 
-<ul>
-    <li>Champions League</li>
-    <li>La Liga</li>
-    <li>Copa do Rei</li>
-    <li>Supercopa da Espanha</li>
-    <li>Mundial de Clubes</li>
-</ul>
+  .nav-btn:hover {
+    background: #004d98;
+  }
 
-<a href="/barcelona">Voltar</a>
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+  }
 
-</body>
-</html>
+  .lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .item {
+    background: #1f2937;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .item:hover {
+    background: #374151;
+    transform: scale(1.02);
+  }
+</style>
+
+<div class="navbar">
+  <a class="nav-btn" href="/barcelona">História</a>
+  <a class="nav-btn" href="/barcelona/jogadores">Jogadores</a>
+  <a class="nav-btn" href="/barcelona/titulos">Títulos</a>
+</div>
+
+<div class="container">
+  <h1>Títulos do Barcelona</h1>
+
+  <div class="lista">
+    <div class="item">Champions League (5x)</div>
+    <div class="item">La Liga (27x)</div>
+    <div class="item">Copa do Rei (31x)</div>
+  </div>
+</div>

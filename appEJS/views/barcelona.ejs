@@ -1,60 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>FC Barcelona</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial;
+    background: #111827;
+    color: white;
+    margin: 0;
+  }
 
-    <style>
-        body{
-            font-family: Arial;
-            background:#a50044;
-            color:white;
-            text-align:center;
-            margin:0;
-        }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: #000;
+    padding: 15px;
+  }
 
-        header{
-            background:#004d98;
-            padding:20px;
-        }
+  .nav-btn {
+    text-decoration: none;
+    color: white;
+    background: #a50044;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
 
-        .container{
-            max-width:800px;
-            margin:auto;
-            padding:30px;
-        }
+  .nav-btn:hover {
+    background: #004d98;
+  }
 
-        a{
-            color:yellow;
-            margin:10px;
-            display:inline-block;
-            font-weight:bold;
-        }
-    </style>
-</head>
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+  }
 
-<body>
+  .hero {
+    background: linear-gradient(135deg, #a50044, #004d98);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 
-<header>
-    <h1>FC Barcelona</h1>
-    <p>Més que un club</p>
-</header>
+  .content {
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 10px;
+    line-height: 1.6;
+  }
+</style>
 
-<div class="container">
-    <h2>História</h2>
-
-    <p>
-    Fundado em 1899 na cidade de Barcelona, o FC Barcelona é um dos clubes
-    mais tradicionais do futebol mundial.
-    </p>
-
-    <p>
-    O clube se destacou por seu estilo de jogo ofensivo e pela formação
-    de grandes talentos do futebol mundial.
-    </p>
-
-    <a href="/barcelona/jogadores">Jogadores</a>
-    <a href="/barcelona/titulos">Títulos</a>
+<div class="navbar">
+  <a class="nav-btn" href="/barcelona">História</a>
+  <a class="nav-btn" href="/barcelona/jogadores">Jogadores</a>
+  <a class="nav-btn" href="/barcelona/titulos">Títulos</a>
 </div>
 
-</body>
-</html>
+<div class="container">
+  <div class="hero">
+    <h1>FC Barcelona</h1>
+    <p>História de um gigante europeu</p>
+  </div>
+
+  <div class="content">
+    <p>Fundado em 1899, o FC Barcelona é um dos clubes mais importantes do mundo.</p>
+    <p>Conhecido pelo estilo "tiki-taka" e sua identidade única.</p>
+  </div>
+</div>
